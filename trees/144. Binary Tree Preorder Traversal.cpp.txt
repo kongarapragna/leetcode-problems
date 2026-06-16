@@ -1,0 +1,11 @@
+if (node == NULL){
+            return;
+        }
+        res.push_back(node->val);
+        helperFunc(node->left, res);
+        helperFunc(node->right, res);
+    }
+    vector<int> preorderTraversal(TreeNode* root) {
+        vector<int> res;
+        helperFunc(root, res);
+        return res;
